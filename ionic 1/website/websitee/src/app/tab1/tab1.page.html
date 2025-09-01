@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button  id="hello" fill="solid" href="http://localhost:8100/tabs/tab3"><img src="../../assets/flipkart logo.svg"></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button id="hello" fill="solid" color="medium"><img src="../../assets/grocery logo.svg"></ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar animated="true" placeholder="Search for Products, Brands and Mor.."></ion-searchbar>
+    <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-refresher (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-card>
+    <!-- <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <img src="../../assets/phla.png"><br>Top Offers
+        </ion-col>
+        <ion-col size="4">
+          <img src="../../assets/dusra.png">Mobiles & Tablets
+        </ion-col>
+        <ion-col size="4">
+          <img src="../../assets/electronics.webp">Electronics
+        </ion-col>
+      </ion-row>
+    </ion-grid> -->
+    <swiper-container [slidesPerView]="3"
+    >
+      <swiper-slide><img src="../../assets/top offerrr.webp"><br>Top Offers</swiper-slide>
+      <swiper-slide><img src="../../assets/mobileeeeeeeeee.webp"><br>Mobile & Tablets</swiper-slide>
+      <swiper-slide><img src="../../assets/laptop 3.webp"><br>Electronics</swiper-slide>
+      <swiper-slide><img src="../../assets/TVS.webp"><br>TVs And Appliances</swiper-slide>
+      <swiper-slide><img src="../../assets/phasion.webp"><br>Fashion</swiper-slide>
+      <swiper-slide><img src="../../assets/decorasion.jpg"><br>Beauty</swiper-slide>
+      <swiper-slide><img src="../../assets/home&kitchen.webp"><br>Home&<br>Kitchen</swiper-slide>
+      <swiper-slide><img src="../../assets/furniture2.webp"><br>Furniture</swiper-slide>
+      <swiper-slide><img src="../../assets/flights2.webp"><br>Flights</swiper-slide>
+      <swiper-slide><img src="../../assets/grocery2.webp"><br>Grocery</swiper-slide>
+    </swiper-container>
+  </ion-card>
+  <swiper-container (slidechange)="swiperSlideChanged($event)" [loop]="true" [pagination]="true" [autoplay]="2000"  [speed]="1000">
+    <swiper-slide><a href="https://www.flipkart.com/big-dussehra-sale-store"><img
+          src="../../assets/1 slider.webp"></a></swiper-slide>
+    <swiper-slide><a
+        href="https://www.flipkart.com/mobiles/~cs-81hziz7kkm/pr?sid=tyy%2C4io&collection-tab-name=iPhone%2014%20and%2014%20Plus&param=18830">
+        <img src="../../assets/2nd sliderr.webp"></a></swiper-slide>
+    <swiper-slide><a href="https://www.flipkart.com/6bo/b5g/~cs-cgwyfjotyy/
+      pr?sid=6bo%2Cb5g&collection-tab-name=Lenovo+Gaming&ctx=eyJjYXJkQ29udGV4dCI
+      6eyJhdHRyaWJ1dGVzIjp7InNvdXJjZUNvbnRlbnRUeXBlIjp7InNpbmdsZVZhbHVlQXR0cmlidXR
+      lIjp7ImtleSI6InNvdXJjZUNvbnRlbnRUeXBlIiwiaW5mZXJlbmNlVHlwZSI6IlNDVCIsInZhbHV
+      lIjoiQUQiLCJ2YWx1ZVR5cGUiOiJTSU5HTEVfVkFMVUVEIn19fX19&nnc=T582R8K9YCTE_AD&pa
+      geUID=1698169080054"><img src="../../assets/3rd slider.webp"></a></swiper-slide>
+    <swiper-slide><a href="https://www.flipkart.com/tyy/4io/~cs-gcxawvd1ly/pr?sid=tyy%2C
+      4io&collection-tab-name=+vivo+T2+Pro+5G&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp
+      7InNvdXJjZUNvbnRlbnRUeXBlIjp7InNpbmdsZVZhbHVlQXR0cmlidXRlIjp7ImtleSI6InNvdXJjZUNvbn
+      RlbnRUeXBlIiwiaW5mZXJlbmNlVHlwZSI6IlNDVCIsInZhbHVlIjoiQUQiLCJ2YWx1ZVR5cGUiOiJTSU5HTE
+      VfVkFMVUVEIn19fX19&nnc=5MMIRRJ0F5T5_AD&pageUID=1698169148160">
+        <img src="../../assets/4th slider.webp"></a></swiper-slide>
+    <swiper-slide><img src="../../assets/5th slider.webp"></swiper-slide>
+    <swiper-slide><img src="../../assets/6th slider.jpg"></swiper-slide>
+    <swiper-slide><img src="../../assets/7th slider.jpg"></swiper-slide>
+    <swiper-slide><img src="../../assets/8th slider.webp"></swiper-slide>
+
+  </swiper-container>
+  <ion-card><a href="https://www.flipkart.com/bank-terms-and-conditions-store?PARAM=4985">
+      <img src="../../assets/sbi.webp"></a>
+  </ion-card>
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="10">
+          <h5><b id="yaya">Best Mobile</b></h5>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button fill="clear" [routerLink]="['mobilee']"><ion-icon name="chevron-forward-circle" > </ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          <img src="../../assets/phone1.webp"><br> Samsung S22 5G <br> inc of offers
+        </ion-col>
+        <ion-col size="4">
+          <img src="../../assets/phone2.webp"> Redmi 12 <br> inc of offers
+        </ion-col>
+        <ion-col size="4">
+          <img src="../../assets/phone3.webp">Google Pixel 7a <br> inc of offers
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
